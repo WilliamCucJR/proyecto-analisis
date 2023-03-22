@@ -1,0 +1,41 @@
+.cotizaciones-data-grid{
+    
+    /*padding: 80px;
+    background-size: cover;
+    height: 100vh;
+    background-repeat:no-repeat; */
+
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    padding-top: 5%;
+}
+
+.container{
+    background-color: aqua;
+
+    background-color: rgba(0, 0, 0, .05);
+
+    border-radius: 40px;
+}
+
+.text-container-cotizaciones{
+    padding: 10px;
+    font-size: 75px;
+    color: #fff;
+    font-family: Poppins;
+}
+  
+.centered-button{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+  
+  
+  
+  
+  
+  
+  

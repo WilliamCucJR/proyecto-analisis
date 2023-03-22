@@ -1,0 +1,27 @@
+body{
+        background-image: url( '/src/img/Wave.svg' );
+        background-size: cover;
+        background-repeat:no-repeat; 
+    }
+     
+ .body-login{
+  background-image: url( '/src/img/Wave.svg' );
+  background-size: cover;
+  background-repeat:no-repeat; 
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .contenedor-login{
+  background-color: #fff;
+  box-shadow:
+          0.8px 6.1px 2.2px rgba(0, 0, 0, 0.042),
+          1.9px 14.7px 5.3px rgba(0, 0, 0, 0.061),
+          3.4px 26.7px 10px rgba(0, 0, 0, 0.075),
+          5.6px 43.9px 17.9px rgba(0, 0, 0, 0.089),
+          9px 70.6px 33.4px rgba(0, 0, 0, 0.108),
+          17px 133px 80px rgba(0, 0, 0, 0.15)
+          ;
+}

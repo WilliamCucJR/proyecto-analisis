@@ -1,0 +1,17 @@
+
+.square-content{
+    border-radius: 40px;
+    margin: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88vh;
+}
+
+.text-container {
+  padding: 10px;
+  font-size: 75px;
+  color: #fff;
+  font-family: Poppins;
+  text-decoration: underline;
+}
