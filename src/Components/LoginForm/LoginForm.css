@@ -1,7 +1,5 @@
 body{
-        background-image: url( '/src/img/Wave.svg' );
-        background-size: cover;
-        background-repeat:no-repeat; 
+        background-color: #e5dccf;
     }
      
  .body-login{

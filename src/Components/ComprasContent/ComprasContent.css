@@ -7,7 +7,7 @@
 
     background-size: cover;
     background-repeat:no-repeat; 
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
 
@@ -52,4 +52,25 @@
 .card:hover{
     cursor: pointer;
     background-color: #f4f4f4;
+}
+
+
+.cont-grid{
+    background-color: aqua;
+
+    background-color: rgba(0, 0, 0, .05);
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2%;
+    margin-top: 10px;
+    margin-left: 225px;
+    margin-right: 225px;
+    border-radius: 40px;
+}
+
+.content-title{
+    padding-top: 5%;
 }

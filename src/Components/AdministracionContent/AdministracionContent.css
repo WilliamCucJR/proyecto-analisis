@@ -53,3 +53,23 @@
     cursor: pointer;
     background-color: #f4f4f4;
 }
+
+.cont-grid-administracion{
+    background-color: aqua;
+
+    background-color: rgba(0, 0, 0, .05);
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2%;
+    margin-top: 10px;
+    margin-left: 390px;
+    margin-right: 390px;
+    border-radius: 40px;
+}
+
+.content-title-administracion{
+    padding-top: 5%;
+}

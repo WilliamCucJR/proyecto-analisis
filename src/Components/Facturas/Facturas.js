@@ -43,7 +43,7 @@ export default function Facturas() {
               <Table celled>
                 <Table.Header>
                   <Table.Row>
-                    <Table.HeaderCell>No. Cotización</Table.HeaderCell>
+                    <Table.HeaderCell>No. Factura</Table.HeaderCell>
                     <Table.HeaderCell>Proveedor</Table.HeaderCell>
                     <Table.HeaderCell>No. Orden de compra</Table.HeaderCell>
                     <Table.HeaderCell>Estado</Table.HeaderCell>
@@ -72,7 +72,7 @@ export default function Facturas() {
                     <Table.Cell>0000001</Table.Cell>
                     <Table.Cell>
                       <Icon name="checkmark" />
-                      Aprovada
+                      Pagada
                     </Table.Cell>
                     <Table.Cell className="centered-button">
                         <Button color='blue'><Icon name="eye" /> Ver</Button>
@@ -94,13 +94,13 @@ export default function Facturas() {
                         <Button  color='orange'><Icon name="trash alternate outline" /> Eliminar</Button>
                     </Table.Cell>
                   </Table.Row>
-                  <Table.Row negative>
+                  <Table.Row>
                     <Table.Cell>0000004</Table.Cell>
                     <Table.Cell>Proveedor 2</Table.Cell>
                     <Table.Cell>0000002</Table.Cell>
                     <Table.Cell>
-                      <Icon name="x" />
-                      Rechazada
+                      <Icon name="warning" />
+                      Pendiente
                     </Table.Cell>
                     <Table.Cell className="centered-button">
                         <Button color='blue'><Icon name="eye" /> Ver</Button>
