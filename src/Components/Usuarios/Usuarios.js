@@ -1,9 +1,22 @@
-import { Grid, Form, Button, Icon, Table } from "semantic-ui-react";
+import { useState } from "react";
+import SemanticDatepicker from "react-semantic-ui-datepickers";
+import "react-semantic-ui-datepickers/dist/react-semantic-ui-datepickers.css";
+import { Grid, Form, Button, Icon, Table, TextArea, Select } from "semantic-ui-react";
 import "./Usuarios.css";
 
 export default function Usuarios() {
 
-  function back(){
+  const [date, setDate] = useState(null);
+  const [dates, setDates] = useState([]);
+  const handleDateChange = (event, data) => setDate(data.value);
+  const handleDatesChange = (event, data) => setDates(data.value);
+
+  const genderOptions = [
+    { key: "m", text: "Masculino", value: "masculino" },
+    { key: "f", text: "Femenino", value: "femenino" },
+  ];
+
+  function back() {
     window.history.back();
   }
 
@@ -13,7 +26,13 @@ export default function Usuarios() {
         <Grid.Row>
           <Grid.Column width={3} textAlign="center">
             <div>
-              <Button icon labelPosition="left" color="teal" size='large' onClick={back}>
+              <Button
+                icon
+                labelPosition="left"
+                color="teal"
+                size="large"
+                onClick={back}
+              >
                 <Icon name="arrow left" />
                 Atras
               </Button>
@@ -38,31 +57,60 @@ export default function Usuarios() {
               <Form>
                 <Form.Group>
                   <Form.Input
-                    label="Solicitante"
-                    placeholder="Solicitante"
+                    label="Nombre Completo"
+                    placeholder="Nombre Completo"
                     width={16}
                   />
                 </Form.Group>
                 <Form.Group>
-                  <Form.Input
-                    label="Departamento"
-                    placeholder="Departamento"
-                    width={8}
+                  <Form.Input label="Usuario" placeholder="Usuario" width={8} />
+                  <Form.Input label="Contraseña" placeholder="Contraseña" width={8} />
+                </Form.Group>
+                <Form.Group>
+                  <SemanticDatepicker
+                    onChange={handleDateChange}
+                    format="DD/MM/YYYY"
+                    label="Fecha de Nacimiento"
+                    width={3}
                   />
-                  <Form.Input label="Puesto" placeholder="Puesto" width={8} />
+                  <Form.Field
+                    control={Select}
+                    options={genderOptions}
+                    label={{
+                      children: "Genero",
+                      htmlFor: "form-select-control-gender",
+                    }}
+                    placeholder="Gender"
+                    search
+                    searchInput={{ id: "form-select-control-gender" }}
+                    width={12}
+                  />
                 </Form.Group>
                 <Form.Group>
                   <Form.Input
-                    label="Producto"
-                    placeholder="Producto"
+                    label="Correo"
+                    placeholder="Correo"
                     width={8}
                   />
                   <Form.Input
-                    label="Cantidad"
-                    placeholder="Cantidad"
+                    label="Numero de Telefono"
+                    placeholder="Numero de Telefono"
                     width={8}
                   />
                 </Form.Group>
+                <Form.Group>
+                  <Form.Input
+                    label="Dirección"
+                    placeholder="Dirección"
+                    width={16}
+                  />
+                </Form.Group>
+                <Form.Field
+                  id="form-textarea-control-opinion"
+                  control={TextArea}
+                  label="Intereses/Hobbies"
+                  placeholder="Intereses / Hobbies"
+                />
 
                 <Button type="submit" color="teal">
                   Guardar
@@ -93,8 +141,12 @@ export default function Usuarios() {
                     </Table.Cell>
                     <Table.Cell>Ejecutivo</Table.Cell>
                     <Table.Cell className="centered-button">
-                        <Button color='yellow' icon><Icon name="edit outline" /></Button>
-                        <Button color='red' icon><Icon name="trash alternate outline" /></Button>
+                      <Button color="yellow" icon>
+                        <Icon name="edit outline" />
+                      </Button>
+                      <Button color="red" icon>
+                        <Icon name="trash alternate outline" />
+                      </Button>
                     </Table.Cell>
                   </Table.Row>
                   <Table.Row positive>
@@ -107,8 +159,12 @@ export default function Usuarios() {
                     </Table.Cell>
                     <Table.Cell>Ejecutivo</Table.Cell>
                     <Table.Cell className="centered-button">
-                        <Button color='yellow' icon><Icon name="edit outline" /></Button>
-                        <Button color='red' icon><Icon name="trash alternate outline" /></Button>
+                      <Button color="yellow" icon>
+                        <Icon name="edit outline" />
+                      </Button>
+                      <Button color="red" icon>
+                        <Icon name="trash alternate outline" />
+                      </Button>
                     </Table.Cell>
                   </Table.Row>
                   <Table.Row positive>
@@ -121,8 +177,12 @@ export default function Usuarios() {
                     </Table.Cell>
                     <Table.Cell>Asistende de Bodega</Table.Cell>
                     <Table.Cell className="centered-button">
-                        <Button color='yellow' icon><Icon name="edit outline" /></Button>
-                        <Button color='red' icon><Icon name="trash alternate outline" /></Button>
+                      <Button color="yellow" icon>
+                        <Icon name="edit outline" />
+                      </Button>
+                      <Button color="red" icon>
+                        <Icon name="trash alternate outline" />
+                      </Button>
                     </Table.Cell>
                   </Table.Row>
                   <Table.Row negative>
@@ -135,8 +195,12 @@ export default function Usuarios() {
                     </Table.Cell>
                     <Table.Cell>Ejecutivo</Table.Cell>
                     <Table.Cell className="centered-button">
-                        <Button color='yellow' icon><Icon name="edit outline" /></Button>
-                        <Button color='red' icon><Icon name="trash alternate outline" /></Button>
+                      <Button color="yellow" icon>
+                        <Icon name="edit outline" />
+                      </Button>
+                      <Button color="red" icon>
+                        <Icon name="trash alternate outline" />
+                      </Button>
                     </Table.Cell>
                   </Table.Row>
                 </Table.Body>

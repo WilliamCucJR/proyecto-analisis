@@ -50,16 +50,16 @@ export default function ContabilidadContent() {
                   borderRadius: 10,
                   on: "hover",
                 }}
-                name="cotizaciones"
+                name="facturas"
               >
                 <Icon
                   bordered
-                  name="file outline"
+                  name="file alternate outline"
                   size="massive"
                   color="grey"
                 />
                 <Card.Content>
-                  <Card.Header>Cotizaciones</Card.Header>
+                  <Card.Header>Facturas</Card.Header>
                 </Card.Content>
               </Card>
             </Grid.Column>
@@ -75,16 +75,16 @@ export default function ContabilidadContent() {
                   borderRadius: 10,
                   on: "hover",
                 }}
-                name="ordenes-compra"
+                name="reporteria"
               >
                 <Icon
                   bordered
-                  name="shop"
+                  name="file outline"
                   size="massive"
                   color="grey"
                 />
                 <Card.Content>
-                  <Card.Header>Ordenes de Compra</Card.Header>
+                  <Card.Header>Reportes</Card.Header>
                 </Card.Content>
               </Card>
             </Grid.Column>

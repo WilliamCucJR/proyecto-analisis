@@ -2,19 +2,23 @@ import { Grid, Form, Button, Icon, Table } from "semantic-ui-react";
 import "./Cotizaciones.css";
 
 export default function Cotizaciones() {
-
-  function back(){
+  function back() {
     window.history.back();
   }
 
-    return(
-        <div className="cotizaciones-data-grid">
-      
+  return (
+    <div className="cotizaciones-data-grid">
       <Grid columns="three">
         <Grid.Row>
           <Grid.Column width={3} textAlign="center">
             <div>
-              <Button icon labelPosition="left" color="teal" size='large' onClick={back}>
+              <Button
+                icon
+                labelPosition="left"
+                color="teal"
+                size="large"
+                onClick={back}
+              >
                 <Icon name="arrow left" />
                 Atras
               </Button>
@@ -28,8 +32,7 @@ export default function Cotizaciones() {
               </span>
             </div>
           </Grid.Column>
-          <Grid.Column width={3}>
-          </Grid.Column>
+          <Grid.Column width={3}></Grid.Column>
         </Grid.Row>
       </Grid>
       <div className="container">
@@ -37,6 +40,7 @@ export default function Cotizaciones() {
           <Grid.Row>
             <Grid.Column>
               <h2>Lista de Cotizaciones</h2>
+              <Button positive>Crear Cotización <Icon name="plus" /></Button>
               <Table celled>
                 <Table.Header>
                   <Table.Row>
@@ -53,10 +57,17 @@ export default function Cotizaciones() {
                     <Table.Cell>0000001</Table.Cell>
                     <Table.Cell>Proveedor 1</Table.Cell>
                     <Table.Cell>0000001</Table.Cell>
-                    <Table.Cell><Icon name="warning" />Pendiente</Table.Cell>
+                    <Table.Cell>
+                      <Icon name="warning" />
+                      Pendiente
+                    </Table.Cell>
                     <Table.Cell className="centered-button">
-                        <Button color='blue'><Icon name="eye" /> Ver</Button>
-                        <Button  color='orange'><Icon name="trash alternate outline" /> Eliminar</Button>
+                      <Button color="blue">
+                        <Icon name="eye" /> Ver
+                      </Button>
+                      <Button color="orange">
+                        <Icon name="trash alternate outline" /> Eliminar
+                      </Button>
                     </Table.Cell>
                   </Table.Row>
                   <Table.Row positive>
@@ -68,18 +79,29 @@ export default function Cotizaciones() {
                       Aprovada
                     </Table.Cell>
                     <Table.Cell className="centered-button">
-                        <Button color='blue'><Icon name="eye" /> Ver</Button>
-                        <Button  color='orange'><Icon name="trash alternate outline" /> Eliminar</Button>
+                      <Button color="blue">
+                        <Icon name="eye" /> Ver
+                      </Button>
+                      <Button color="orange">
+                        <Icon name="trash alternate outline" /> Eliminar
+                      </Button>
                     </Table.Cell>
                   </Table.Row>
                   <Table.Row>
                     <Table.Cell>0000003</Table.Cell>
                     <Table.Cell>Proveedor 1</Table.Cell>
                     <Table.Cell>0000002</Table.Cell>
-                    <Table.Cell><Icon name="warning" />Pendiente</Table.Cell>
+                    <Table.Cell>
+                      <Icon name="warning" />
+                      Pendiente
+                    </Table.Cell>
                     <Table.Cell className="centered-button">
-                        <Button color='blue'><Icon name="eye" /> Ver</Button>
-                        <Button  color='orange'><Icon name="trash alternate outline" /> Eliminar</Button>
+                      <Button color="blue">
+                        <Icon name="eye" /> Ver
+                      </Button>
+                      <Button color="orange">
+                        <Icon name="trash alternate outline" /> Eliminar
+                      </Button>
                     </Table.Cell>
                   </Table.Row>
                   <Table.Row negative>
@@ -91,8 +113,12 @@ export default function Cotizaciones() {
                       Rechazada
                     </Table.Cell>
                     <Table.Cell className="centered-button">
-                        <Button color='blue'><Icon name="eye" /> Ver</Button>
-                        <Button  color='orange'><Icon name="trash alternate outline" /> Eliminar</Button>
+                      <Button color="blue">
+                        <Icon name="eye" /> Ver
+                      </Button>
+                      <Button color="orange">
+                        <Icon name="trash alternate outline" /> Eliminar
+                      </Button>
                     </Table.Cell>
                   </Table.Row>
                 </Table.Body>
@@ -102,5 +128,5 @@ export default function Cotizaciones() {
         </Grid>
       </div>
     </div>
-    )
-};
+  );
+}

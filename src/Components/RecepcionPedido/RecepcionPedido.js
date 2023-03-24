@@ -84,6 +84,7 @@ export default function RecepcionPedido() {
                   <SemanticDatepicker
                     onChange={handleDateChange}
                     label="Fecha"
+                    format="DD/MM/YYYY"
                   />
                 </Form.Group>
                 <Form.Group widths="equal">
