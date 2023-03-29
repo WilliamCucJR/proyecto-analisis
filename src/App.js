@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginForm from "./Components/LoginForm";
 import Dashboard from "./Components/Dashboard/Dashboard";
@@ -20,9 +21,22 @@ import Inventario from "./Components/Inventario";
 
 function App() {
 
-  const valor = 1;
+  const [loginValidation, setLoginValidation] = useState(false);
 
-  if(valor === 0){
+  let User = '';
+  let Password = '';
+
+  const userSession = JSON.parse(localStorage.getItem('userSession'));
+
+  console.log(userSession);
+
+  if(userSession != null){
+     User = userSession['Username'];
+     Password = userSession['Password'];
+  }
+  
+
+  if(User === '' || Password === ''){
 
     return (
       <div>
